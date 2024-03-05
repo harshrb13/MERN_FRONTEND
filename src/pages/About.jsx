@@ -32,7 +32,7 @@ function About() {
           <Link to={"/contact"}>
             Connect Now
           </Link>
-          <Link to={"/service"}>
+          <Link to={"/services"}>
             Learn More
           </Link>
         </div>
