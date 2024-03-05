@@ -10,7 +10,7 @@ function Contacts() {
 
   const adminContact = async()=>{
     try {
-      const response = await fetch("http://localhost:4000/api/admin/contacts",{
+      const response = await fetch(`${API}/api/admin/contacts`,{
         method:"GET",
         headers:{
           "Authorization": authorizationToken
