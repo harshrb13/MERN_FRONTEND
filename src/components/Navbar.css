@@ -1,0 +1,116 @@
+header{
+   width: 100%;
+   display: flex;
+   padding: .5rem 0;
+   justify-content: space-between;
+   align-items: center;
+   background-color: black;
+   position: sticky;
+   z-index: 1000;
+   top: 0;
+}
+.nav-left{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    justify-content: space-between;
+
+}
+.logo{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--SemiBold-font);
+}
+.toggler{
+    color: var(--text-color);
+    font-size: 2rem;
+    display: none;
+}
+.Navlinks{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+.Navlinks li{
+    padding: 1rem 1.3rem;
+}
+
+.activeLink{
+    color: white;
+}
+
+.Navlinks li a{
+    position: relative;
+    text-decoration: none;
+    transition: all .4s;
+    font-family: var(--Medium-font);
+}
+.notactive{
+    color: var(--text-color);
+}
+.notactive::after{
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    border-radius: 10px;
+    height: 2.1px;
+    width: 0%;
+    background-color: var(--text-color);
+    transition: all ease .4s ;
+}
+
+.notactive:hover{
+    color: white;
+}
+ .notactive:hover::after{
+   width: 100%;
+}
+.activeLink::after{
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    border-radius: 10px;
+    height: 2.1px;
+    width: 100%;
+    background-color: var(--text-color);
+    transition: all ease-in-out .4s ;
+}
+
+@media (max-width:978px){
+    .Navlinks li{
+        padding: 1rem 1.2vw;
+    }
+}
+
+
+@media (max-width:768px){
+    header{
+        flex-direction: column;
+        padding: 1rem 0;
+        position: static;
+    }
+    .toggler{
+        display: block;
+    }
+   .Navlinks{
+        flex-direction: column;
+   }
+    .toggleoff{
+        max-height: 0px;
+        transition:max-height ease-out .5s;
+        overflow: hidden;  
+
+    }
+    .toggleon{
+        max-height: 400px;
+        overflow: hidden;
+        transition: all ease-in-out .5s;
+    }
+
+    
+}

@@ -1,0 +1,44 @@
+.error-sec{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+.error-sec img{
+    width: 100%;
+}
+.error-sec h2,.error-sec p{
+    text-align: center;
+    padding-bottom: 15px;
+    text-transform: capitalize;
+}
+.error-btn{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+}
+.error-btn a{
+    padding: 0.4rem 1.5rem;
+    text-decoration: none;
+    font-family: var(--Medium-font);
+    transition: all ease .4s;
+    background-color: black;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.error-btn a:hover{
+    outline: 2px solid var(--text-color);
+}
+@media (min-width:425px){
+    .error-sec img{
+        width: 30rem;
+    }
+}

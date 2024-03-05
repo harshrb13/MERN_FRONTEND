@@ -1,0 +1,211 @@
+.admin-panal{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+.admin-nav{
+    position: fixed;
+    height: 100%;
+    width: 20%;
+    padding-top: 4.3rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(23, 23, 23);
+    top: 0;
+    justify-content: start;
+}
+.admin-nav li{
+    position: relative;
+    list-style: none;
+}
+.admin-nav li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 2rem 2rem;
+    /* width: 100%; */
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: var(--SemiBold-font);
+    letter-spacing: 2px;
+    transition: all .3s;
+}
+.activeAdmin{
+    background: rgb(77, 77, 77);
+    color: black;
+}
+.activeAdmin:after{
+    transition: all .4s;
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: aliceblue;
+    width: 4px;
+    top: 0;
+    right: 0;
+}
+.admin-nav li a:hover{
+    background: rgb(77, 77, 77);
+    color: black;
+}
+
+
+.outlet-window{
+    display: block;
+    margin-left: auto;
+    height: 100%;
+    width: 76%;
+    padding: 0rem 1rem;
+    overflow: auto;
+}
+.outlet-window::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+/* admin/users css */
+
+.admin-users{
+    width: 100%;
+}
+
+table,tr,td{
+    border-collapse: collapse;
+}
+.admin-users table{
+    width: 100%;
+}
+.admin-users table th{
+    padding: 2rem 0rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: var(--SemiBold-font);
+    background-color: rgb(23, 23, 23);
+    /* border: 1px solid rgb(71, 71, 71); */
+    color: var(--text-color);
+}
+
+.admin-users table tr td{
+
+    border-bottom: 1px solid rgb(71, 71, 71);
+    text-align: center;
+    padding: 3rem 1rem;
+    font-family: var(--light-font);
+    letter-spacing: 1px;
+}
+.delete-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    margin: auto;
+    width: 50px;
+    background-color: #682b2b;
+    transition: all .3s;
+
+}
+.delete-icon{
+    color: white;
+    font-size: 1.3rem;
+}
+.delete-btn:hover{
+    background-color: white;
+}
+.delete-btn:hover .delete-icon{
+    color: red;
+}
+.edit-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #2e4b4c;
+    transition: all .3s; 
+}
+.edit-icon{
+    color: white;
+    font-size: 1.3rem;
+    
+}
+.edit-btn:hover{
+    background-color: white;
+}
+.edit-btn:hover .edit-icon{
+    color: green;
+}
+
+
+
+/* updateBox css  */
+
+.updateBox{
+    width: 100%;
+    padding: 0rem 7rem;
+}
+
+
+
+@media (max-width:978px){
+    .admin-nav{
+        position: absolute;
+        top: 0;
+        flex-direction: row;
+        width: 100%;
+        height: auto;  
+        padding: 0;
+        justify-content: center;
+    }
+    .admin-nav li a{
+        border: none;
+    }
+    .outlet-window{
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        margin-top: 15%;
+    }
+    .activeAdmin:after{
+        transition: all .4s;
+        content: "";
+        position: absolute;
+        height: 1px;
+        background-color: aliceblue;
+        width: 100%;
+        top: 0;
+    }
+}
+@media(max-width:768px){
+    .admin-nav li a{
+        padding: 2vw 4vw;
+        font-size: 3vw;
+        letter-spacing: 0;
+    }
+    .outlet-window{
+        margin-top:14% ;
+    }
+    .admin-users table tr td{
+        padding: 3vw 1rem;
+        font-size: .7rem;
+    }
+    .admin-users table th{
+        font-size: .9rem;
+        padding: 4vw 1rem;
+    }
+    .updateBox{
+        padding: 0rem 10vw;
+    }
+}
+@media (max-width:425px){
+    .updateBox{
+        padding: 0;
+    }
+}
